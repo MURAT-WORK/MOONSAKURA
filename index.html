@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<!-- SEO ОПТИМИЗАЦИЯ -->
+<title>Йога и Фитнес Онлайн | Инструктор Полина</title>
+<meta name="description" content="Онлайн-занятия по йоге и фитнесу с инструктором Полиной. Индивидуальный подход, работа со здоровьем.">
+<meta name="keywords" content="йога сатка, персональный тренер сатка, фитнес полина, moonsakura, онлайн сопровождение, растяжка, женский тренинг">
+<meta name="author" content="POLY / MoonSakura">
+
+<!-- OPEN GRAPH -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="POLY / MoonSakura — Йога • Фитнес • Баланс">
+<meta property="og:description" content="Движение, которое делает тело сильнее, а жизнь легче. Персональные программы тренировок.">
+<meta property="og:url" content="https://moonsakura.ru/">
+<meta property="og:image" content="img/background.png">
+
+<!-- ИКОНКА САЙТА -->
+<link class="favicon" rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23EEF3F7' stroke='%238CBFD8' stroke-width='4'/%3E%3Ccircle cx='50' cy='50' r='12' fill='%238CBFD8'/%3E%3C/svg%3E">
+
+<!-- ШРИФТЫ: Unbounded для заголовков, Jost (веса 300, 500, 600, 700) для основного текста -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;500;600;700&family=Unbounded:wght@700;800&display=swap" rel="stylesheet">
+
+<!-- МИКРОРАЗМЕТКА SCHEMA.ORG (JSON-LD) ДЛЯ ПОИСКОВЫХ СИСТЕМ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Полина",
+  "alternateName": "MoonSakura",
+  "url": "https://moonsakura.ru/",
+  "image": "https://moonsakura.ru/img/poly.png",
+  "jobTitle": "Инструктор по йоге и фитнесу",
+  "description": "Сертифицированный инструктор по йоге и тренер тренажёрного зала. Специализируется на здоровой спине, реабилитационном фитнесе и онлайн-сопровождении.",
+  "sameAs": [
+    "https://t.me/lifewithPoly",
+    "https://vk.ru/akimenko1997",
+    "https://www.instagram.com/yoga_with_poly"
+  ]
+}
+</script>
+
+<style>
+:root {
+  --bg: #EEF3F7;
+  
+  /* СТЕКЛО */
+  --glass: rgba(255, 255, 255, 0.45); 
+  --glass-border: rgba(255, 255, 255, 0.6);
+  
+  /* ЦВЕТА ШРИФТОВ */
+  --text: #163042;       /* Оригинальный глубокий цвет заголовков */
+  --text-soft: #3D5365;  /* Мягкий стальной оттенок Jost для текста */
+  --accent: #8CBFD8;
+  --accent-light: #CBE4F3;
+  --accent-dark: #4A81A1;
+
+  --radius-xs: 14px;
+  --radius-sm: 20px;
+  --radius-md: 28px;
+  --radius-lg: 36px;
+  --radius-xl: 48px;
+  --radius-pill: 999px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { 
+  scroll-behavior: smooth; 
+  max-width: 100%;
+  overflow-x: hidden;
+  width: 100%;
+}
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Jost', sans-serif; 
+  font-weight: 500; /* ТОНЬШЕ */
+  max-width: 100%;
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+}
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.15;
+}
+
+/* Global Background (Чистый блюр без пелены) */
+.global-bg {
+  position: fixed;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: 115vh;
+  z-index: -2;
+  background-image: url('img/background.png');
+  background-size: cover;
+  background-position: center top;
+  filter: blur(6px); 
+  transform: scale(1.06); 
+  pointer-events: none;
+}
+
+/* NAV */
+.nav {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 32px);
+  max-width: 420px;
+  height: 54px;
+  z-index: 1000;
+  background: var(--glass); 
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-pill);
+  box-shadow: 0 16px 40px rgba(11, 25, 37, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-logo {
+  font-family: 'Unbounded', sans-serif; 
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--text) !important; 
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 24px 80px;
+  position: relative;
+  overflow: hidden;
+}
+.glow-orb { position: absolute; border-radius: 50%; filter: blur(100px); pointer-events: none; animation: floatOrb 10s ease-in-out infinite; }
+.orb1 { width: 350px; height: 350px; background: rgba(140, 191, 216, 0.35); top: -100px; right: -50px; }
+.orb2 { width: 250px; height: 250px; background: rgba(203, 228, 243, 0.4); bottom: 100px; left: -50px; animation-delay: 3s; }
+.orb3 { width: 180px; height: 180px; background: rgba(169, 188, 203, 0.25); top: 35%; right: 5%; animation-delay: 5s; }
+@keyframes floatOrb { 0%,100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-20px) scale(1.05); } }
+
+/* Парящий стеклянный контейнер */
+.hero-glass-card {
+  background: var(--glass);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 48px 32px;
+  max-width: 720px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 24px 48px rgba(22, 38, 51, 0.05);
+}
+
+.hero-content { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; width: 100%; }
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 16px;
+  background: rgba(255, 255, 255, 0.5); border: 1px solid var(--glass-border); border-radius: var(--radius-pill);
+  font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text);
+  margin-bottom: 24px;
+  opacity: 0; animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s;
+  font-family: 'Jost', sans-serif;
+}
+.hero-eyebrow::before { content: ''; width: 5px; height: 5px; background: var(--accent-dark); border-radius: 50%; }
+
+.hero-title {
+  font-family: 'Unbounded', sans-serif; 
+  font-size: clamp(30px, 6.5vw, 54px); 
+  font-weight: 800;
+  line-height: 1.25; letter-spacing: -0.04em;
+  color: var(--text);
+  opacity: 0; animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.4s;
+  margin-bottom: 24px;
+}
+
+.hero-sub { 
+  font-size: clamp(14px, 2.5vw, 17px); 
+  font-weight: 500; 
+  color: var(--text-soft); 
+  line-height: 1.6; 
+  margin-bottom: 32px; 
+  max-width: 580px; 
+  opacity: 0; 
+  animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.6s; 
+}
+
+/* Векторная графика Воин 1 (Отредактированный референс) */
+.hero-graphic {
+  width: 180px; height: 180px; /* Увеличено со 140px */
+  background: linear-gradient(135deg, var(--accent-light) 0%, var(--ice) 100%);
+  border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 32px;
+  box-shadow: 0 16px 32px rgba(122, 174, 200, 0.15);
+  animation: floatOrb 8s ease-in-out infinite alternate;
+  opacity: 0; animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.8s;
+}
+
+/* Тонкая настройка вывода растровой картинки */
+.hero-warrior-img {
+  width: 75%; /* Увеличено с 65% */
+  height: 75%; /* Увеличено с 65% */
+  object-fit: contain;
+  display: block;
+}
+
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; opacity: 0; animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 1s; }
+
+.btn-primary {
+  padding: 14px 32px; background: var(--text); color: #FFFFFF;
+  border: 1px solid var(--text); border-radius: var(--radius-pill);
+  font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600; /* ТОНЬШЕ */
+  letter-spacing: 0.5px;
+  cursor: pointer; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+.btn-primary:hover { transform: translateY(-2px); background: transparent; color: var(--text); box-shadow: 0 12px 24px rgba(11,25,37,0.2); }
+.btn-secondary {
+  padding: 14px 32px; background: rgba(255, 255, 255, 0.4); color: var(--text);
+  border: 1px solid var(--glass-border); border-radius: var(--radius-pill);
+  font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600; /* ТОНЬШЕ */
+  cursor: pointer; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+.btn-secondary:hover { border-color: var(--text); background: rgba(255,255,255,0.6); transform: translateY(-2px); }
+
+/* SECTIONS */
+section { padding: 90px 24px; position: relative; }
+.section-header { text-align: center; display: flex; flex-direction: column; align-items: center; }
+.section-label {
+  font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--text);
+  margin-bottom: 12px;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  font-family: 'Unbounded', sans-serif;
+}
+.section-label::before, .section-label::after { content: ''; width: 24px; height: 1px; background: var(--text); opacity: 0.2; }
+.section-title { font-family: 'Unbounded', sans-serif; font-size: clamp(24px, 5.5vw, 38px); font-weight: 800; letter-spacing: -0.04em; line-height: 1.3; margin-bottom: 16px; color: var(--text); text-align: center; }
+.section-sub { font-size: 15px; color: var(--text-soft); max-width: 520px; line-height: 1.7; margin: 0 auto 48px; text-align: center; font-weight: 500; }
+
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.divider { width: 100%; height: 1px; background: linear-gradient(90deg, transparent, var(--glass-border), transparent); }
+
+/* ===== DIRECTIONS ===== */
+.directions-list { display: grid; grid-template-columns: 1fr; gap: 20px; max-width: 960px; margin: 0 auto; }
+@media(min-width: 768px) { .directions-list { grid-template-columns: repeat(3, 1fr); } }
+.direction-card {
+  background: var(--glass);
+  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 40px 32px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.direction-card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.8); box-shadow: 0 20px 40px rgba(11,25,37,0.08); }
+.direction-icon { width: 56px; height: 56px; background: rgba(255, 255, 255, 0.4); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: var(--text); margin-bottom: 24px; border: 1px solid var(--glass-border); }
+.direction-name { font-family: 'Unbounded', sans-serif; font-size: 18px; font-weight: 700; margin-bottom: 12px; color: var(--text); letter-spacing: -0.02em; }
+.direction-desc { font-size: 14px; line-height: 1.6; color: var(--text-soft); font-weight: 500; }
+
+/* ===== TRAINER PROFILE CARD (Polina) ===== */
+.masters-bg { background: transparent; overflow-x: hidden; }
+.masters-list { display: flex; flex-direction: column; max-width: 860px; margin: 0 auto; }
+.master-card-h {
+  display: flex;
+  flex-direction: column;
+  background: var(--glass);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  overflow: visible; /* Разрешаем выход фото за рамки вверх */
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  text-align: center;
+  align-items: center;
+  position: relative;
+}
+.master-card-h:hover { transform: translateY(-4px); box-shadow: 0 24px 48px rgba(11,25,37,0.08); border-color: rgba(255,255,255,0.8); }
+
+.master-h-photo { 
+  width: 100%; 
+  height: 320px; 
+  position: relative; 
+  background: transparent; 
+}
+
+/* ФОТО ПОЛИНЫ (Полностью заполняет ширину, без обрезки по бокам, вылезая вверх на 105%) */
+.master-png-img { 
+  position: absolute; 
+  bottom: 0; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  transform-origin: bottom center; 
+  width: 100%; /* На всю ширину */
+  height: 105%; /* Высота 105% */
+  object-fit: contain; /* НИКАКОЙ ОБРЕЗКИ: Полина полностью видна во весь рост без кропа */
+  object-position: bottom center; /* Привязка к низу */
+  border-bottom-left-radius: var(--radius-lg);
+  border-bottom-right-radius: var(--radius-lg);
+  z-index: 2; 
+  pointer-events: none; 
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.master-card-h:hover .master-png-img {
+  transform: translateX(-50%) scale(1.02); /* Безопасный деликатный зум */
+}
+
+/* Текстовый блок ПОВЕРХ фото (z-index: 5) */
+.master-h-content { 
+  padding: 40px 32px; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+  position: relative; 
+  z-index: 5; 
+}
+
+.master-role-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  background: rgba(255, 255, 255, 0.6); 
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-pill); 
+  margin-bottom: 18px;
+}
+.master-role { 
+  font-size: 10px; 
+  font-weight: 600; /* ТОНЬШЕ */
+  letter-spacing: 2px; 
+  text-transform: uppercase; 
+  color: var(--text); 
+  font-family: 'Unbounded', sans-serif; 
+  line-height: 1;
+}
+
+.master-name { font-family: 'Unbounded', sans-serif; font-size: 32px; font-weight: 800; letter-spacing: -0.04em; margin-bottom: 14px; line-height: 1; text-align: center; color: var(--text); }
+.master-desc { font-size: 14px; line-height: 1.6; color: var(--text-soft); margin-bottom: 24px; max-width: 520px; text-align: center; font-weight: 500; }
+.master-socials { display: flex; gap: 10px; justify-content: center; }
+
+/* Кнопки соцсетей */
+.social-btn {
+  width: 38px; height: 38px;
+  background: rgba(255, 255, 255, 0.4); border: 1px solid var(--glass-border); border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text); text-decoration: none; transition: all 0.3s ease;
+}
+.social-btn:hover { background: rgba(255,255,255,0.7); border-color: var(--text); }
+
+/* ОПТИМИЗИРОВАННЫЕ ЦВЕТНЫЕ СТИЛИ ДЛЯ ИКОНОК */
+.social-btn svg { 
+  width: 20px; 
+  height: 20px; 
+  display: block; 
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.social-btn:hover svg {
+  transform: scale(1.08);
+}
+
+/* Текстовые логотипы (VK) */
+.social-txt {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  display: block;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.social-btn .social-txt {
+  font-size: 11px;
+}
+.footer-social .social-txt {
+  font-size: 13px;
+}
+.social-btn:hover .social-txt,
+.footer-social:hover .social-txt {
+  transform: scale(1.08);
+}
+
+@media (min-width: 768px) {
+  .master-card-h { flex-direction: row; min-height: 380px; align-items: stretch; }
+  .master-card-h .master-h-content { order: 1; width: 55%; padding: 48px; text-align: center; align-items: center; background: none; }
+  
+  /* Контейнер фото на ПК */
+  .master-card-h .master-h-photo  { order: 2; width: 45%; height: auto; }
+  
+  .master-png-img {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: var(--radius-lg);
+  }
+}
+
+/* ===== PROGRAMS ===== */
+.programs-grid { display: grid; grid-template-columns: 1fr; gap: 20px; max-width: 680px; margin: 0 auto; }
+.program-card {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 40px 32px;
+  background: var(--glass);
+  backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  text-align: center;
+  position: relative; overflow: hidden;
+}
+.program-card::before {
+  content: ''; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: transparent; transition: background 0.3s;
+}
+.program-card:hover::before, .program-card.popular::before { background: var(--text); }
+.program-card:hover { border-color: rgba(255,255,255,0.8); transform: translateY(-4px); }
+.program-card.popular { background: rgba(255, 255, 255, 0.2); border-color: rgba(255,255,255,0.4); box-shadow: 0 24px 48px rgba(122,174,200,0.1); }
+
+.program-scenario { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text-soft); margin-bottom: 8px; font-family: 'Unbounded', sans-serif; }
+.program-name { font-family: 'Unbounded', sans-serif; font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 16px; letter-spacing: -0.04em; }
+.program-features { margin-bottom: 24px; font-size: 14px; line-height: 1.7; color: var(--text-soft); font-weight: 500; }
+.program-features span { display: block; margin-bottom: 6px; }
+.program-features span::before { content: '✓ '; color: var(--text); font-weight: 700; }
+.program-duration { font-size: 11px; color: var(--text-soft); opacity: 0.8; margin-bottom: 20px; display: block; font-weight: 500; }
+.program-book-btn {
+  display: inline-block; padding: 12px 36px; background: var(--text); color: #FFFFFF;
+  border: none; border-radius: var(--radius-pill); font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 600; /* ТОНЬШЕ */
+  cursor: pointer; text-decoration: none; text-transform: uppercase; letter-spacing: 1px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.program-book-btn:hover { background: var(--accent-dark); transform: scale(1.03); }
+
+/* ===== TRUST METRICS ===== */
+.trust-panel {
+  background: var(--glass); border: 1px solid var(--glass-border); border-radius: var(--radius-xl);
+  padding: 48px 32px; display: grid; grid-template-columns: 1fr; gap: 32px; max-width: 860px; margin: 0 auto;
+}
+@media(min-width: 768px) { .trust-panel { grid-template-columns: repeat(3, 1fr); gap: 16px; divide-x: 1px solid rgba(255,255,255,0.4); } .trust-item:not(:first-child) { border-left: 1px solid rgba(255,255,255,0.4); } }
+.trust-item { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.trust-val { font-family: 'Unbounded', sans-serif; font-size: 32px; font-weight: 800; color: var(--text); line-height: 1; margin-bottom: 8px; letter-spacing: -0.04em; }
+.trust-lbl { font-size: 13px; font-weight: 700; color: var(--text-soft); }
+
+/* ===== PORTFOLIO CAROUSEL ===== */
+.portfolio-bg { background: transparent; overflow-x: hidden; width: 100%; position: relative; }
+.portfolio-viewport { position: relative; width: 100%; overflow: hidden; padding: 24px 0; touch-action: pan-y; }
+.portfolio-track { display: flex; will-change: transform; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+
+.portfolio-slide {
+  min-width: 280px; max-width: 280px; aspect-ratio: 3/4; margin: 0 12px;
+  border-radius: var(--radius-lg); overflow: hidden; background: rgba(255, 255, 255, 0.3); border: 1px solid var(--glass-border);
+  opacity: 0.35; transform: scale(0.9) translateZ(0); 
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative; pointer-events: none; user-select: none;
+  display: flex; align-items: center; justify-content: center;
+}
+.portfolio-slide.active { opacity: 1; transform: scale(1) translateZ(0); box-shadow: 0 24px 48px rgba(36,49,63,0.06); }
+.portfolio-slide-img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-lg); pointer-events: none; user-select: none; }
+
+.portfolio-placeholder-svg { width: 40%; height: 40%; color: var(--text); opacity: 0.3; }
+
+.story-header { position: absolute; top: 20px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 8px; z-index: 4; pointer-events: none; justify-content: center; width: 100%; }
+.story-avatar { width: 28px; height: 28px; border-radius: 50%; background: var(--glass); border: 1px solid var(--text); display: flex; align-items: center; justify-content: center; font-family: 'Unbounded', sans-serif; font-size: 10px; color: var(--text); font-weight: 700; }
+.story-title { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text); font-family: 'Unbounded', sans-serif; }
+
+@media (min-width: 768px) { .portfolio-slide { min-width: 360px; max-width: 360px; margin: 0 16px; } }
+
+.portfolio-nav { display: none; align-items: center; justify-content: center; gap: 16px; margin-top: 24px; }
+@media (min-width: 768px) { .portfolio-nav { display: flex; } }
+.portfolio-btn { width: 40px; height: 40px; background: var(--glass); border: 1px solid var(--glass-border); border-radius: 50%; color: var(--text); font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+.portfolio-btn:hover { background: rgba(255, 255, 255, 0.6); border-color: var(--text); color: var(--text); }
+.portfolio-btn.disabled { opacity: 0.3; pointer-events: none; }
+
+/* ===== REVIEWS ===== */
+.carousel-wrap { position: relative; max-width: 860px; margin: 0 auto; overflow: hidden; }
+.carousel-track { display: flex; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+.review-card { min-width: 100%; padding: 40px 24px; background: var(--glass); border: 1px solid var(--glass-border); border-radius: var(--radius-lg); text-align: center; display: flex; flex-direction: column; align-items: center; }
+.review-stars { display: flex; gap: 4px; justify-content: center; margin-bottom: 16px; }
+.star { color: var(--text); font-size: 14px; }
+.review-text { font-size: 15px; line-height: 1.8; color: var(--text); margin-bottom: 24px; font-style: italic; max-width: 580px; text-align: center; font-weight: 500; }
+.review-author { display: flex; align-items: center; gap: 12px; justify-content: center; flex-direction: column; }
+.review-avatar { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 11px; color: #FFFFFF; background: var(--text); flex-shrink: 0; font-family: 'Unbounded', sans-serif; }
+.review-author-info strong { display: block; font-size: 14px; font-weight: 700; color: var(--text); text-align: center; margin-bottom: 2px; }
+.review-author-info span { font-size: 12px; color: var(--text-soft); opacity: 0.7; display: block; text-align: center; font-weight: 500; }
+.carousel-nav { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 24px; }
+.carousel-btn { width: 40px; height: 40px; background: var(--glass); border: 1px solid var(--glass-border); border-radius: 50%; color: var(--text-soft); font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+.carousel-btn:hover { background: rgba(255,255,255,0.6); border-color: var(--text); color: var(--text); }
+.carousel-dots { display: flex; gap: 6px; }
+.dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.2); transition: all 0.3s; cursor: pointer; }
+.dot.active { background: var(--text); width: 20px; border-radius: 3px; }
+
+/* ===== FAQ ACCORDIONS ===== */
+.faq-wrap { max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+.faq-item { background: var(--glass); border: 1px solid var(--glass-border); border-radius: var(--radius-sm); overflow: hidden; transition: all 0.3s; }
+.faq-trigger { width: 100%; padding: 22px 28px; display: flex; align-items: center; justify-content: space-between; text-align: left; background: transparent; border: none; outline: none; cursor: pointer; }
+.faq-title { font-family: 'Unbounded', sans-serif; font-size: 13px; font-weight: 700; color: var(--text); letter-spacing: -0.02em; font-weight: 600; /* ТОНЬШЕ */ }
+.faq-chevron { transition: transform 0.3s; color: var(--text-soft); }
+.faq-content { max-height: 0; opacity: 0; overflow: hidden; transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; }
+.faq-inner { padding: 0 28px 24px; font-size: 14px; line-height: 1.6; color: var(--text-soft); border-top: 1px solid rgba(255,255,255,0.3); padding-top: 16px; font-weight: 500; }
+
+/* ===== FOOTER & CTA ===== */
+footer { 
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(11, 25, 37, 0.95) 100%); 
+  border-top: 1px solid var(--glass-border); 
+  padding: 72px 24px 32px; 
+  text-align: center; 
+  backdrop-filter: blur(12px); 
+  -webkit-backdrop-filter: blur(12px);
+}
+.footer-cta { display: flex; flex-direction: column; align-items: center; gap: 24px; margin-bottom: 48px; }
+/* Белый цвет для читаемости на темном градиенте */
+.footer-title { font-family: 'Unbounded', sans-serif; font-size: clamp(20px, 4.5vw, 30px); font-weight: 800; letter-spacing: -0.04em; color: #FFFFFF !important; }
+.footer-subtext { font-size: 15px; color: rgba(255, 255, 255, 0.8) !important; max-width: 460px; line-height: 1.6; font-weight: 500; }
+.footer-socials { display: flex; gap: 12px; justify-content: center; }
+.footer-social { width: 44px; height: 44px; background: var(--glass); border: 1px solid var(--glass-border); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: #FFFFFF !important; font-size: 16px; text-decoration: none; transition: all 0.2s; }
+.footer-social:hover { background: rgba(255,255,255,0.4); border-color: #FFFFFF; transform: translateY(-2px); }
+
+/* ОПТИМИЗИРОВАННЫЕ ЦВЕТНЫЕ СТИЛИ ДЛЯ ИКОНОК В ФУТЕРЕ */
+.footer-social svg { 
+  width: 22px; 
+  height: 22px; 
+  display: block; 
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.footer-social:hover svg {
+  transform: scale(1.08);
+}
+
+.footer-bottom { padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.15); display: flex; flex-direction: column; gap: 6px; align-items: center; }
+.footer-bottom p { font-size: 12px; color: rgba(255, 255, 255, 0.5) !important; opacity: 0.8; font-weight: 500; }
+
+@media (min-width: 768px) { section { padding: 110px 40px; } .carousel-wrap { max-width: 720px; } }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+</head>
+<body>
+
+<!-- Global Background -->
+<div class="global-bg"></div>
+
+<!-- HEADER NAVIGATION -->
+<nav class="nav" id="navbar">
+  <a href="#hero" class="nav-logo">POLY / MoonSakura</a>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero" id="hero">
+  <div class="glow-orb orb1"></div>
+  <div class="glow-orb orb2"></div>
+  <div class="glow-orb orb3"></div>
+  <div class="hero-content">
+    <div class="hero-glass-card">
+      <div class="hero-eyebrow">Йога · Фитнес · Питание</div>
+      
+      <!-- Контейнер для вашего изображения warrior.png -->
+      <div class="hero-graphic">
+        <img src="img/warrior.png" alt="Воин" class="hero-warrior-img" loading="eager">
+      </div>
+
+      <h1 class="hero-title">Верни телу лёгкость<br><span>и природную силу</span></h1>
+      <p class="hero-sub">Анатомически безопасные практики йоги и фитнеса с Полиной. Индивидуальный подход, основанный на глубоком знании биомеханики тела и подтвержденный годами практики.</p>
+      
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="document.getElementById('programs').scrollIntoView({behavior:'smooth'})">Выбрать программу</button>
+        <button class="btn-secondary" onclick="document.getElementById('masters').scrollIntoView({behavior:'smooth'})">Обо мне</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- DIRECTIONS SECTION -->
+<section id="directions">
+  <div class="section-header reveal">
+    <div class="section-label">Основы здоровья</div>
+    <h2 class="section-title">Три пути к балансу</h2>
+    <p class="section-sub">Грамотные методики, направленные на улучшение подвижности суставов, укрепление мышц и мягкую растяжку.</p>
+  </div>
+  
+  <div class="directions-list reveal">
+    <!-- Йога -->
+    <div class="direction-card">
+      <div class="direction-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <h3 class="direction-name">Йога</h3>
+      <p class="direction-desc">Гибкость, плавность и осознанное глубокое дыхание для освобождения ума от ментального шума.</p>
+    </div>
+
+    <!-- Фитнес -->
+    <div class="direction-card">
+      <div class="direction-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="10" rx="2" ry="2"/><path d="M6 12h12"/></svg>
+      </div>
+      <h3 class="direction-name">Фитнес</h3>
+      <p class="direction-desc">Функциональный тонус, укрепление кора, формирование красивой осанки и здоровой выносливости.</p>
+    </div>
+
+    <!-- Питание -->
+    <div class="direction-card">
+      <div class="direction-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v2M12 22a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM8 11h8M8 15h6"/></svg>
+      </div>
+      <h3 class="direction-name">Питание</h3>
+      <p class="direction-desc">Базовые рекомендации по рациону для поддержания энергии, легкости и достижения ваших физических целей.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- TRAINER SECTION (Polina Card) -->
+<section id="masters" class="masters-bg">
+  <div class="section-header reveal">
+    <div class="section-label">Ваш проводник</div>
+    <h2 class="section-title">Обо мне</h2>
+    <p class="section-sub">Бережная поддержка, профессиональный опыт и внимание к каждому вашему движению.</p>
+  </div>
+  <div class="masters-list">
+
+    <div class="master-card-h reveal reveal-delay-1">
+      <div class="master-h-photo">
+        <!-- ФОН и РАМКИ УБРАНЫ. Фото на 105% заполняет пространство без сеток -->
+        <img src="img/poly.png" class="master-png-img" alt="Инструктор по йоге Полина" loading="lazy">
+      </div>
+      <div class="master-h-content">
+        <div class="master-role-container">
+          <!-- Сокращено до ТРЕНЕР · ИНСТРУКТОР -->
+          <div class="master-role" style="font-weight: 600;">Тренер · Инструктор</div>
+        </div>
+        <div class="master-name">Полина</div>
+        <p class="master-desc">Я — сертифицированный инструктор по йоге и тренер тренажёрного зала. Окончила «Академию Йоги» и имею диплом государственного образца. Есть базовые знания в реабилитологии. Выстраиваю практики по йоге и фитнес-тренировки так, чтобы вам было комфортно и вы шли к результату. Мотивирую и поддерживаю своих клиентов. Работаю с грыжами, искривлением позвоночника и гиперлордозом.</p>
+        <div class="master-socials">
+          <!-- Telegram -->
+          <a class="social-btn" href="https://t.me/lifewithPoly" target="_blank" title="Telegram">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.47-.52-.17l-9.5 5.97-4.11-1.28c-.9-.28-.92-.9.19-1.33L20.2 4.13c.74-.27 1.38.17 1.14.94l-2.85 13.41c-.21 1.01-.81 1.26-1.66.78l-4.43-3.26-2.14 2.06c-.24.24-.44.44-.9.44z"/>
+            </svg>
+          </a>
+          <!-- VK -->
+          <a class="social-btn" href="https://vk.ru/akimenko1997" target="_blank" title="ВКонтакте">
+            <span class="social-txt">VK</span>
+          </a>
+          <!-- Instagram -->
+          <a class="social-btn" href="https://www.instagram.com/yoga_with_poly" target="_blank" title="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PROGRAMS SECTION -->
+<section id="programs">
+  <div class="section-header reveal">
+    <div class="section-label">Выберите свой путь</div>
+    <h2 class="section-title">Программы</h2>
+    <p class="section-sub">Занятия, которые закрывают ваши цели и улучшают ваше общее состояние.</p>
+  </div>
+
+  <div class="programs-grid">
+    <!-- Сценарий 1 -->
+    <div class="program-card popular reveal reveal-delay-1">
+      <span class="popular-badge">Популярно</span>
+      <span class="program-scenario">Я хочу снять напряжение</span>
+      <h3 class="program-name">Йога + растяжка</h3>
+      <div class="program-features">
+        <span>Мягкое вытяжение и гибкость</span>
+        <span>Осознанное дыхание</span>
+        <span>Снятие мышечных зажимов</span>
+      </div>
+      <span class="program-duration">≈ 60–75 минут занятия</span>
+      <button class="program-book-btn" onclick="directTelegramBooking('Йога + растяжка')">Выбрать программу</button>
+    </div>
+
+    <!-- Сценарий 2 -->
+    <div class="program-card reveal reveal-delay-2">
+      <span class="program-scenario">Я хочу стать сильнее</span>
+      <h3 class="program-name">Функциональный фитнес</h3>
+      <div class="program-features">
+        <span>Проработка мышечного корсета</span>
+        <span>Здоровая спина и красивые ягодицы</span>
+        <span>Энергия и выносливость</span>
+      </div>
+      <span class="program-duration">≈ 45–60 минут занятия</span>
+      <button class="program-book-btn" onclick="directTelegramBooking('Функциональный фитнес')">Выбрать программу</button>
+    </div>
+
+    <!-- Сценарий 3 -->
+    <div class="program-card reveal reveal-delay-3">
+      <span class="program-scenario">Мне нужен личный план</span>
+      <h3 class="program-name">Персональное сопровождение</h3>
+      <div class="program-features">
+        <span>Индивидуальный план тренировок и корректировка техники упражнений</span>
+        <span>Базовые рекомендации по питанию</span>
+        <span>Каждый день на связи</span>
+      </div>
+      <span class="program-duration">Индивидуальный формат веения</span>
+      <button class="program-book-btn" onclick="directTelegramBooking('Персональное сопровождение')">Выбрать программу</button>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- TRUST METRICS -->
+<section class="reveal">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="trust-panel">
+      <div class="trust-item">
+        <span class="trust-val">100+</span>
+        <span class="trust-lbl">Проведённых практик</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-val">1:1</span>
+        <span class="trust-lbl">Глубокий персональный подход</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-val">Online</span>
+        <span class="trust-lbl">Занятия из любой точки мира</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PORTFOLIO SECTION -->
+<section class="portfolio-bg" id="gallery">
+  <div class="section-header reveal">
+    <div class="section-label">Эстетика движения</div>
+    <h2 class="section-title">Галерея практик</h2>
+    <p class="section-sub">Ощущение легкости, баланса линий и пространства в каждом зафиксированном моменте.</p>
+  </div>
+  
+  <div class="portfolio-viewport reveal" id="portfolioViewport">
+    <div class="portfolio-track" id="portfolioTrack">
+      
+      <!-- Slide 1 -->
+      <div class="portfolio-slide">
+        <div class="story-header">
+          <div class="story-avatar">1</div>
+          <span class="story-title">Баланс</span>
+        </div>
+        <svg class="portfolio-placeholder-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 3v18M3 12h18" stroke-dasharray="2 2" />
+          <circle cx="12" cy="12" r="6" />
+        </svg>
+      </div>
+      
+      <!-- Slide 2 -->
+      <div class="portfolio-slide">
+        <div class="story-header">
+          <div class="story-avatar">2</div>
+          <span class="story-title">Гибкость</span>
+        </div>
+        <svg class="portfolio-placeholder-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 3v18M3 12h18" stroke-dasharray="2 2" />
+          <path d="M12 6c-3.3 0-6 2.7-6 6s2.7 6 6 6" />
+        </svg>
+      </div>
+      
+      <!-- Slide 3 -->
+      <div class="portfolio-slide">
+        <div class="story-header">
+          <div class="story-avatar">3</div>
+          <span class="story-title">Дыхание</span>
+        </div>
+        <svg class="portfolio-placeholder-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 3v18M3 12h18" stroke-dasharray="2 2" />
+          <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+        </svg>
+      </div>
+      
+      <!-- Slide 4 -->
+      <div class="portfolio-slide">
+        <div class="story-header">
+          <div class="story-avatar">4</div>
+          <span class="story-title">Сила</span>
+        </div>
+        <svg class="portfolio-placeholder-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 3v18M3 12h18" stroke-dasharray="2 2" />
+          <rect x="8" y="8" width="8" height="8" rx="1" />
+        </svg>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="portfolio-nav reveal">
+    <button class="portfolio-btn disabled" id="pPrevBtn" aria-label="Назад">&#8592;</button>
+    <button class="portfolio-btn" id="pNextBtn" aria-label="Вперед">&#8594;</button>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- REVIEWS SECTION -->
+<section id="reviews" class="reviews-bg">
+  <div class="section-header reveal">
+    <div class="section-label">Репутация</div>
+    <h2 class="section-title">Отзывы учениц</h2>
+    <p class="section-sub">Слова тех, кто доверяет нам работу со своим телом.</p>
+  </div>
+  
+  <div class="carousel-wrap reveal">
+    <div class="carousel-track" id="carouselTrack"></div>
+    <div class="carousel-nav">
+      <button class="carousel-btn" id="prevBtn">&#8592;</button>
+      <div class="carousel-dots" id="carouselDots"></div>
+      <button class="carousel-btn" id="nextBtn">&#8594;</button>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FAQ SECTION -->
+<section id="faq" class="reveal">
+  <div class="section-header">
+    <div class="section-label">Вопросы и ответы</div>
+    <h2 class="section-title">Частые вопросы</h2>
+    <p class="section-sub">Все, что вам нужно знать перед началом занятий.</p>
+  </div>
+
+  <div class="faq-wrap">
+    <!-- FAQ 1 -->
+    <div class="faq-item">
+      <button class="faq-trigger" onclick="toggleFaq(0)">
+        <span class="faq-title">Подходит ли новичкам?</span>
+        <span class="faq-chevron">↓</span>
+      </button>
+      <div class="faq-content">
+        <div class="faq-inner">
+          Да, конечно. Все тренировки разрабатываются с учетом вашего текущего уровня. Я выстраиваю нагрузку плавно, без перегрузок.
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ 2 -->
+    <div class="faq-item">
+      <button class="faq-trigger" onclick="toggleFaq(1)">
+        <span class="faq-title">Можно ли заниматься онлайн?</span>
+        <span class="faq-chevron">↓</span>
+      </button>
+      <div class="faq-content">
+        <div class="faq-inner">
+          Да, конечно. Мы с вами созваниваемся ВКонтакте или Телемост. Я вижу вас, при необходимости исправляю технику и всё подробно объясняю.
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ 3 -->
+    <div class="faq-item">
+      <button class="faq-trigger" onclick="toggleFaq(2)">
+        <span class="faq-title">Как проходит первая встреча?</span>
+        <span class="faq-chevron">↓</span>
+      </button>
+      <div class="faq-content">
+        <div class="faq-inner">
+          Обсуждаем ваши цели, наличие противопоказаний и на первой тренировке я оцениваю подвижность ваших суставов, общую гибкость и ставлю технику в асанах или упражнениях в фитнесе.
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ 4 -->
+    <div class="faq-item">
+      <button class="faq-trigger" onclick="toggleFaq(3)">
+        <span class="faq-title">Что нужно подготовить?</span>
+        <span class="faq-chevron">↓</span>
+      </button>
+      <div class="faq-content">
+        <div class="faq-inner">
+          Достаточно удобной одежды, которая не сковывает движения, и обычного коврика для фитнеса/йоги.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FOOTER & CTA -->
+<footer id="footer">
+  <div class="footer-cta reveal">
+    <div class="footer-title font-unbounded">Готова начать?<br><span class="opacity-80">Первый шаг — это просто написать.</span></div>
+    <p class="footer-subtext">Свяжитесь со мной напрямую в Telegram, ВКонтакте или Instagram, чтобы задать любой вопрос или забронировать время для вашей пробной практики.</p>
+    
+    <div class="footer-socials">
+      <!-- Telegram -->
+      <a class="footer-social" href="https://t.me/lifewithPoly" target="_blank" title="Telegram">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.47-.52-.17l-9.5 5.97-4.11-1.28c-.9-.28-.92-.9.19-1.33L20.2 4.13c.74-.27 1.38.17 1.14.94l-2.85 13.41c-.21 1.01-.81 1.26-1.66.78l-4.43-3.26-2.14 2.06c-.24.24-.44.44-.9.44z"/>
+        </svg>
+      </a>
+      <!-- VK -->
+      <a class="footer-social" href="https://vk.ru/akimenko1997" target="_blank" title="ВКонтакте">
+        <span class="social-txt">VK</span>
+      </a>
+      <!-- Instagram -->
+      <a class="footer-social" href="https://www.instagram.com/yoga_with_poly" target="_blank" title="Instagram">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>© POLY / MoonSakura. Все права защищены.</p>
+  </div>
+</footer>
+
+<script>
+// REVEAL ANIMATIONS
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); } });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// EXPANDED REVIEWS DATA
+const reviews = [
+  { name: 'Анастасия', time: '2 недели назад', text: 'Занимаемся с Полиной уже месяц. Невероятное ощущение легкости в спине и плечах после каждой практики. Мягко, профессионально и очень комфортно.', initials: 'АН' },
+  { name: 'Екатерина', time: '1 месяц назад', text: 'Онлайн-сопровождение превзошло все мои ожидания. Полина постоянно на связи, корректирует технику по видео и помогает выстроить режим питания.', initials: 'ЕК' },
+  { name: 'Мария', time: '3 недели назад', text: 'Лучший тренер! Практики йоги и растяжки стали моей любимой частью недели. Ушли мышечные зажимы, появилось много энергии.', initials: 'МР' },
+  { name: 'Ольга', time: '2 месяца назад', text: 'Полина помогла мне восстановиться после родов. Бережная нагрузка, отсутствие спешки и очень теплое отношение. Настоятельно рекомендую!', initials: 'ОЛ' },
+  { name: 'Дарья', time: '1.5 месяца назад', text: 'Из-за сидячей работы в офисе постоянно болела шея. После курса функционального фитнеса с Полиной я забыла про эту проблему. Осанка стала идеальной.', initials: 'ДР' },
+  { name: 'Ирина', time: '3 месяца назад', text: 'Благодаря Полине я наконец-то полюбила регулярные тренировки. Никакого насилия над собой — только бережная забота и ощутимый тонус.', initials: 'ИР' }
+];
+
+let rCurrent = 0;
+const rTrack = document.getElementById('carouselTrack');
+const rDotsWrap = document.getElementById('carouselDots');
+
+reviews.forEach((r, i) => {
+  rTrack.innerHTML += `<div class="review-card">
+    <div class="review-stars">
+      <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+    </div>
+    <p class="review-text">"${r.text}"</p>
+    <div class="review-author">
+      <div class="review-avatar" style="background:var(--accent-light); color:#24313F; font-family:'Jura', sans-serif;">${r.initials}</div>
+      <div class="review-author-info"><strong>${r.name}</strong><span>${r.time}</span></div>
+    </div>
+  </div>`;
+  const dot = document.createElement('div');
+  dot.className = 'dot' + (i === 0 ? ' active' : '');
+  dot.onclick = () => goToReview(i);
+  rDotsWrap.appendChild(dot);
+});
+
+function goToReview(n) {
+  rCurrent = (n + reviews.length) % reviews.length;
+  rTrack.style.transform = `translateX(-${rCurrent * 100}%)`;
+  document.querySelectorAll('.dot').forEach((d,i) => d.classList.toggle('active', i === rCurrent));
+}
+document.getElementById('prevBtn').onclick = () => goToReview(rCurrent - 1);
+document.getElementById('nextBtn').onclick = () => goToReview(rCurrent + 1);
+
+let rTouchStartX = 0;
+rTrack.parentElement.addEventListener('touchstart', e => { rTouchStartX = e.touches[0].clientX; }, {passive:true});
+rTrack.parentElement.addEventListener('touchend', e => {
+  const diff = rTouchStartX - e.changedTouches[0].clientX;
+  if (Math.abs(diff) > 50) goToReview(rCurrent + (diff > 0 ? 1 : -1));
+});
+
+// FAQ ACCORDION ENGINE
+function toggleFaq(index) {
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach((item, i) => {
+    const content = item.querySelector('.faq-content');
+    const chevron = item.querySelector('.faq-chevron');
+    if (i === index) {
+      if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+        content.style.maxHeight = '0px';
+        content.style.opacity = '0';
+        chevron.style.transform = 'rotate(0deg)';
+      } else {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        content.style.opacity = '1';
+        chevron.style.transform = 'rotate(180deg)';
+      }
+    } else {
+      content.style.maxHeight = '0px';
+      content.style.opacity = '0';
+      chevron.style.transform = 'rotate(0deg)';
+    }
+  });
+}
+
+// DIRECT TELEGRAM CTAs
+function directTelegramBooking(programName) {
+  const message = `Здравствуйте, Полина! Я хочу записаться на программу:\n\n👉 ${programName}`;
+  const encodedMessage = encodeURIComponent(message);
+  const telegramUrl = `https://t.me/lifewithPoly?text=${encodedMessage}`;
+  window.open(telegramUrl, '_blank');
+}
+
+// STRICT LINEAR PORTFOLOW CAROUSEL ENGINE
+const pTrack = document.getElementById('portfolioTrack');
+const pSlides = document.querySelectorAll('.portfolio-slide');
+const pViewport = document.getElementById('portfolioViewport');
+const pPrevBtn = document.getElementById('pPrevBtn');
+const pNextBtn = document.getElementById('pNextBtn');
+
+let pIndex = 0; 
+let pStartX = 0;
+let pCurrentTranslate = 0;
+let pPrevTranslate = 0;
+let pIsDragging = false;
+
+function updatePortfolioLayout() {
+  const viewportWidth = pViewport.clientWidth;
+  const pMargin = window.innerWidth < 768 ? 12 : 16;
+  const pSlideWidth = pSlides[0].offsetWidth + pMargin * 2;
+  
+  pCurrentTranslate = (viewportWidth / 2) - (pIndex * pSlideWidth + pSlideWidth / 2);
+  pPrevTranslate = pCurrentTranslate;
+  
+  pTrack.style.transition = 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+  pTrack.style.transform = `translateX(${pCurrentTranslate}px)`;
+  
+  pSlides.forEach((slide, idx) => {
+    slide.classList.toggle('active', idx === pIndex);
+  });
+  
+  if(pPrevBtn) pPrevBtn.classList.toggle('disabled', pIndex === 0);
+  if(pNextBtn) pNextBtn.classList.toggle('disabled', pIndex === pSlides.length - 1);
+}
+
+function movePortfolio(direction) {
+  pIndex += direction;
+  if (pIndex < 0) pIndex = 0;
+  if (pIndex > pSlides.length - 1) pIndex = pSlides.length - 1;
+  updatePortfolioLayout();
+}
+
+if(pPrevBtn) pPrevBtn.onclick = () => movePortfolio(-1);
+if(pNextBtn) pNextBtn.onclick = () => movePortfolio(1);
+
+function pOnTouchStart(e) {
+  pIsDragging = true;
+  pStartX = e.touches[0].clientX;
+  pTrack.style.transition = 'none';
+}
+
+function pOnTouchMove(e) {
+  if (!pIsDragging) return;
+  const currentX = e.touches[0].clientX;
+  const diff = currentX - pStartX;
+  pTrack.style.transform = `translateX(${pPrevTranslate + diff}px)`;
+}
+
+// Swipe support logic
+function pOnTouchEnd(e) {
+  if (!pIsDragging) return;
+  pIsDragging = false;
+  const diff = e.changedTouches[0].clientX - pStartX;
+  
+  if (diff < -50 && pIndex < pSlides.length - 1) {
+    pIndex += 1;
+  } else if (diff > 50 && pIndex > 0) {
+    pIndex -= 1;
+  }
+  updatePortfolioLayout();
+}
+
+pViewport.addEventListener('touchstart', pOnTouchStart, { passive: true });
+pViewport.addEventListener('touchmove', pOnTouchMove, { passive: true });
+pViewport.addEventListener('touchend', pOnTouchEnd);
+
+window.addEventListener('DOMContentLoaded', () => { setTimeout(updatePortfolioLayout, 150); });
+window.addEventListener('resize', updatePortfolioLayout);
+window.addEventListener('orientationchange', () => { setTimeout(updatePortfolioLayout, 200); });
+</script>
+</body>
+</html>
