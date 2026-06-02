@@ -1020,11 +1020,11 @@ function toggleFaq(index) {
   });
 }
 
-// DIRECT TELEGRAM CTAs
+// DIRECT TELEGRAM CTAs (Перенаправление в личный чат MoonSakura_111)
 function directTelegramBooking(programName) {
   const message = `Здравствуйте, Полина! Я хочу записаться на программу:\n\n👉 ${programName}`;
   const encodedMessage = encodeURIComponent(message);
-  const telegramUrl = `https://t.me/lifewithPoly?text=${encodedMessage}`;
+  const telegramUrl = `https://t.me/MoonSakura_111?text=${encodedMessage}`;
   window.open(telegramUrl, '_blank');
 }
 
