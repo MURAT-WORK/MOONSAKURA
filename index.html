@@ -1,5 +1,3 @@
-<!-- START OF FILE index.html -->
-
 <!DOCTYPE html>
 <html lang="ru" class="scroll-smooth">
 <head>
@@ -1017,11 +1015,21 @@ function toggleFaq(index) {
   });
 }
 
-// DIRECT TELEGRAM CTAs (Перенаправление в личный чат MoonSakura_111)
+// Новая логика: отправка пользователя в Telegram-бот с параметром выбранной программы
 function directTelegramBooking(programName) {
-  const message = `Здравствуйте, Полина! Я хочу записаться на программу:\n\n👉 ${programName}`;
-  const encodedMessage = encodeURIComponent(message);
-  const telegramUrl = `https://t.me/MoonSakura_111?text=${encodedMessage}`;
+  let startParam = '';
+  if (programName === 'Йога + растяжка') {
+    startParam = 'yoga';
+  } else if (programName === 'Функциональный фитнес') {
+    startParam = 'fitness';
+  } else if (programName === 'Персональное сопровождение') {
+    startParam = 'personal';
+  }
+  
+  // Юзернейм твоего бота из BotFather (без значка @)
+  // Если у тебя другое имя бота, замени его внутри кавычек
+  const botUsername = 'moonsakura_yoga_bot'; 
+  const telegramUrl = `https://t.me/${botUsername}?start=${startParam}`;
   window.open(telegramUrl, '_blank');
 }
 
@@ -1104,5 +1112,3 @@ window.addEventListener('orientationchange', () => { setTimeout(updatePortfolioL
 </script>
 </body>
 </html>
-
-<!-- END OF FILE index.html -->
