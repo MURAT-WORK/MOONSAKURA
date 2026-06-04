@@ -1,3 +1,5 @@
+<!-- START OF FILE index.html -->
+
 <!DOCTYPE html>
 <html lang="ru" class="scroll-smooth">
 <head>
@@ -7,7 +9,7 @@
 <!-- SEO ОПТИМИЗАЦИЯ -->
 <title>Йога и Фитнес Онлайн | Инструктор Полина</title>
 <meta name="description" content="Онлайн-занятия по йоге и фитнесу с инструктором Полиной. Индивидуальный подход, работа со здоровьем.">
-<meta name="keywords" content="йога сатка, персональный тренер сатка, фитнес полина, moonsakura, онлайн сопровождение, растяжка, женский тренинг">
+<meta name="keywords" content="йога Челябинск, персональный тренер сатка, фитнес полина, moonsakura, онлайн сопровождение, растяжка, женский тренинг">
 <meta name="author" content="POLY / MoonSakura">
 
 <!-- OPEN GRAPH -->
@@ -78,7 +80,7 @@ body {
   background-color: var(--bg);
   color: var(--text);
   font-family: 'Jost', sans-serif; 
-  font-weight: 500; /* ТОНЬШЕ */
+  font-weight: 500; /* TONЬШЕ */
   max-width: 100%;
   overflow-x: hidden;
   width: 100%;
@@ -207,10 +209,10 @@ body::before {
   animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.6s; 
 }
 
-/* Векторная графика Воин 1 (Отредактированный референс) */
+/* Векторная графика Воин 1 */
 .hero-graphic {
-  width: 180px; height: 180px; /* Увеличено со 140px */
-  background: linear-gradient(135deg, var(--accent-light) 0%, var(--ice) 100%);
+  width: 180px; height: 180px; 
+  background: linear-gradient(135deg, var(--accent-light) 0%, var(--bg) 100%);
   border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
   display: flex; align-items: center; justify-content: center;
   margin-bottom: 32px;
@@ -221,8 +223,8 @@ body::before {
 
 /* Тонкая настройка вывода растровой картинки */
 .hero-warrior-img {
-  width: 75%; /* Увеличено с 65% */
-  height: 75%; /* Увеличено с 65% */
+  width: 75%; 
+  height: 75%; 
   object-fit: contain;
   display: block;
 }
@@ -232,7 +234,7 @@ body::before {
 .btn-primary {
   padding: 14px 32px; background: var(--text); color: #FFFFFF;
   border: 1px solid var(--text); border-radius: var(--radius-pill);
-  font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600; /* ТОНЬШЕ */
+  font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600; 
   letter-spacing: 0.5px;
   cursor: pointer; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
@@ -241,7 +243,7 @@ body::before {
 .btn-secondary {
   padding: 14px 32px; background: rgba(255, 255, 255, 0.4); color: var(--text);
   border: 1px solid var(--glass-border); border-radius: var(--radius-pill);
-  font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600; /* ТОНЬШЕ */
+  font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600; 
   cursor: pointer; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
 }
@@ -295,11 +297,12 @@ section { padding: 90px 24px; position: relative; }
   -webkit-backdrop-filter: blur(24px);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
-  overflow: visible; /* Разрешаем выход фото за рамки вверх */
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: visible; 
   text-align: center;
   align-items: center;
   position: relative;
+  /* Объединенные CSS-переходы для плавной интеграции с анимацией появления (reveal) */
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .master-card-h:hover { transform: translateY(-4px); box-shadow: 0 24px 48px rgba(11,25,37,0.08); border-color: rgba(255,255,255,0.8); }
 
@@ -310,17 +313,17 @@ section { padding: 90px 24px; position: relative; }
   background: transparent; 
 }
 
-/* ФОТО ПОЛИНЫ (Полностью заполняет ширину, без обрезки по бокам, вылезая вверх на 105%) */
+/* ФОТО ПОЛИНЫ (Высота увеличена до 115% для более глубокого 3D эффекта) */
 .master-png-img { 
   position: absolute; 
   bottom: 0; 
   left: 50%; 
   transform: translateX(-50%); 
   transform-origin: bottom center; 
-  width: 100%; /* На всю ширину */
-  height: 105%; /* Высота 105% */
-  object-fit: contain; /* НИКАКОЙ ОБРЕЗКИ: Полина полностью видна во весь рост без кропа */
-  object-position: bottom center; /* Привязка к низу */
+  width: 100%; 
+  height: 115%; /* Увеличено со 105% до 115% */
+  object-fit: contain; 
+  object-position: bottom center; 
   border-bottom-left-radius: var(--radius-lg);
   border-bottom-right-radius: var(--radius-lg);
   z-index: 2; 
@@ -328,10 +331,10 @@ section { padding: 90px 24px; position: relative; }
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .master-card-h:hover .master-png-img {
-  transform: translateX(-50%) scale(1.02); /* Безопасный деликатный зум */
+  transform: translateX(-50%) scale(1.02); 
 }
 
-/* Текстовый блок ПОВЕРХ фото (z-index: 5) */
+/* Текстовый блок ПОВЕРХ фото */
 .master-h-content { 
   padding: 40px 32px; 
   display: flex; 
@@ -355,7 +358,7 @@ section { padding: 90px 24px; position: relative; }
 }
 .master-role { 
   font-size: 10px; 
-  font-weight: 600; /* ТОНЬШЕ */
+  font-weight: 600; 
   letter-spacing: 2px; 
   text-transform: uppercase; 
   color: var(--text); 
@@ -376,7 +379,6 @@ section { padding: 90px 24px; position: relative; }
 }
 .social-btn:hover { background: rgba(255,255,255,0.7); border-color: var(--text); }
 
-/* ОПТИМИЗИРОВАННЫЕ ЦВЕТНЫЕ СТИЛИ ДЛЯ ИКОНОК */
 .social-btn svg { 
   width: 20px; 
   height: 20px; 
@@ -448,7 +450,7 @@ section { padding: 90px 24px; position: relative; }
 .program-duration { font-size: 11px; color: var(--text-soft); opacity: 0.8; margin-bottom: 20px; display: block; font-weight: 500; }
 .program-book-btn {
   display: inline-block; padding: 12px 36px; background: var(--text); color: #FFFFFF;
-  border: none; border-radius: var(--radius-pill); font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 600; /* ТОНЬШЕ */
+  border: none; border-radius: var(--radius-pill); font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 600; 
   cursor: pointer; text-decoration: none; text-transform: uppercase; letter-spacing: 1px;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -517,7 +519,7 @@ section { padding: 90px 24px; position: relative; }
 .faq-wrap { max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
 .faq-item { background: var(--glass); border: 1px solid var(--glass-border); border-radius: var(--radius-sm); overflow: hidden; transition: all 0.3s; }
 .faq-trigger { width: 100%; padding: 22px 28px; display: flex; align-items: center; justify-content: space-between; text-align: left; background: transparent; border: none; outline: none; cursor: pointer; }
-.faq-title { font-family: 'Unbounded', sans-serif; font-size: 13px; font-weight: 700; color: var(--text); letter-spacing: -0.02em; font-weight: 600; /* ТОНЬШЕ */ }
+.faq-title { font-family: 'Unbounded', sans-serif; font-size: 13px; font-weight: 600; color: var(--text); letter-spacing: -0.02em; }
 .faq-chevron { transition: transform 0.3s; color: var(--text-soft); }
 .faq-content { max-height: 0; opacity: 0; overflow: hidden; transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; }
 .faq-inner { padding: 0 28px 24px; font-size: 14px; line-height: 1.6; color: var(--text-soft); border-top: 1px solid rgba(255,255,255,0.3); padding-top: 16px; font-weight: 500; }
@@ -532,14 +534,12 @@ footer {
   -webkit-backdrop-filter: blur(12px);
 }
 .footer-cta { display: flex; flex-direction: column; align-items: center; gap: 24px; margin-bottom: 48px; }
-/* Белый цвет для читаемости на темном градиенте */
 .footer-title { font-family: 'Unbounded', sans-serif; font-size: clamp(20px, 4.5vw, 30px); font-weight: 800; letter-spacing: -0.04em; color: #FFFFFF !important; }
 .footer-subtext { font-size: 15px; color: rgba(255, 255, 255, 0.8) !important; max-width: 460px; line-height: 1.6; font-weight: 500; }
 .footer-socials { display: flex; gap: 12px; justify-content: center; }
 .footer-social { width: 44px; height: 44px; background: var(--glass); border: 1px solid var(--glass-border); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: #FFFFFF !important; font-size: 16px; text-decoration: none; transition: all 0.2s; }
 .footer-social:hover { background: rgba(255,255,255,0.4); border-color: #FFFFFF; transform: translateY(-2px); }
 
-/* ОПТИМИЗИРОВАННЫЕ ЦВЕТНЫЕ СТИЛИ ДЛЯ ИКОНОК В ФУТЕРЕ */
 .footer-social svg { 
   width: 22px; 
   height: 22px; 
@@ -577,9 +577,8 @@ footer {
     <div class="hero-glass-card">
       <div class="hero-eyebrow">Йога · Фитнес · Питание</div>
       
-      <!-- Контейнер для вашего изображения warrior.png -->
       <div class="hero-graphic">
-        <img src="img/warrior.png" alt="Воин" class="hero-warrior-img" loading="eager">
+        <img src="img/warrior.png" alt="Иллюстрация позы воина из йоги" class="hero-warrior-img" loading="eager">
       </div>
 
       <h1 class="hero-title">Верни телу лёгкость<br><span>и природную силу</span></h1>
@@ -644,15 +643,14 @@ footer {
   </div>
   <div class="masters-list">
 
+    <!-- Применена плавная анимация появления через класс reveal -->
     <div class="master-card-h reveal reveal-delay-1">
       <div class="master-h-photo">
-        <!-- ФОН и РАМКИ УБРАНЫ. Фото на 105% заполняет пространство без сеток -->
-        <img src="img/poly.png" class="master-png-img" alt="Инструктор по йоге Полина" loading="lazy">
+        <img src="img/poly.png" class="master-png-img" alt="Инструктор по йоге и фитнесу Полина" loading="lazy">
       </div>
       <div class="master-h-content">
         <div class="master-role-container">
-          <!-- Сокращено до ТРЕНЕР · ИНСТРУКТОР -->
-          <div class="master-role" style="font-weight: 600;">Тренер · Инструктор</div>
+          <div class="master-role">Тренер · Инструктор</div>
         </div>
         <div class="master-name">Полина</div>
         <p class="master-desc">Я — сертифицированный инструктор по йоге и тренер тренажёрного зала. Окончила «Академию Йоги» и имею диплом государственного образца. Есть базовые знания в реабилитологии. Выстраиваю практики по йоге и фитнес-тренировки так, чтобы вам было комфортно и вы шли к результату. Мотивирую и поддерживаю своих клиентов. Работаю с грыжами, искривлением позвоночника и гиперлордозом.</p>
@@ -693,7 +691,6 @@ footer {
   <div class="programs-grid">
     <!-- Сценарий 1 -->
     <div class="program-card popular reveal reveal-delay-1">
-      <span class="popular-badge">Популярно</span>
       <span class="program-scenario">Я хочу снять напряжение</span>
       <h3 class="program-name">Йога + растяжка</h3>
       <div class="program-features">
@@ -727,7 +724,7 @@ footer {
         <span>Базовые рекомендации по питанию</span>
         <span>Каждый день на связи</span>
       </div>
-      <span class="program-duration">Индивидуальный формат веения</span>
+      <span class="program-duration">Индивидуальный формат ведения</span>
       <button class="program-book-btn" onclick="directTelegramBooking('Персональное сопровождение')">Выбрать программу</button>
     </div>
   </div>
@@ -1107,3 +1104,5 @@ window.addEventListener('orientationchange', () => { setTimeout(updatePortfolioL
 </script>
 </body>
 </html>
+
+<!-- END OF FILE index.html -->
