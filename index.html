@@ -279,7 +279,7 @@ section { padding: 90px 24px; position: relative; }
   display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.direction-card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.8); box-shadow: 0 20px 40px rgba(11,25,37,0.08); }
+.direction-card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.8); box-shadow: 0 20px 40px rgba(11, 25, 37, 0.08); }
 .direction-icon { width: 56px; height: 56px; background: rgba(255, 255, 255, 0.4); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: var(--text); margin-bottom: 24px; border: 1px solid var(--glass-border); }
 .direction-name { font-family: 'Unbounded', sans-serif; font-size: 18px; font-weight: 700; margin-bottom: 12px; color: var(--text); letter-spacing: -0.02em; }
 .direction-desc { font-size: 14px; line-height: 1.6; color: var(--text-soft); font-weight: 500; }
@@ -483,9 +483,34 @@ section { padding: 90px 24px; position: relative; }
 
 .portfolio-placeholder-svg { width: 40%; height: 40%; color: var(--text); opacity: 0.3; }
 
+/* Измененные стили оверлеев на фото для отличной читаемости белого текста */
 .story-header { position: absolute; top: 20px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 8px; z-index: 4; pointer-events: none; justify-content: center; width: 100%; }
-.story-avatar { width: 28px; height: 28px; border-radius: 50%; background: var(--glass); border: 1px solid var(--text); display: flex; align-items: center; justify-content: center; font-family: 'Unbounded', sans-serif; font-size: 10px; color: var(--text); font-weight: 700; }
-.story-title { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text); font-family: 'Unbounded', sans-serif; }
+.story-avatar { 
+  width: 28px; 
+  height: 28px; 
+  border-radius: 50%; 
+  background: rgba(11, 25, 37, 0.25); /* Затемненное матовое стекло для контраста */
+  border: 1px solid #FFFFFF; /* Белая кромка круга */
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-family: 'Unbounded', sans-serif; 
+  font-size: 10px; 
+  color: #FFFFFF; /* Белая цифра */
+  font-weight: 700; 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.story-title { 
+  font-size: 10px; 
+  font-weight: 700; 
+  letter-spacing: 1.5px; 
+  text-transform: uppercase; 
+  color: #FFFFFF; /* Белый текст надписей */
+  font-family: 'Unbounded', sans-serif; 
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.55); /* Мягкая тень под текстом для лучшей читаемости */
+}
 
 @media (min-width: 768px) { .portfolio-slide { min-width: 360px; max-width: 360px; margin: 0 16px; } }
 
@@ -769,10 +794,8 @@ footer {
           <div class="story-avatar">1</div>
           <span class="story-title">Баланс</span>
         </div>
-        <svg class="portfolio-placeholder-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M12 3v18M3 12h18" stroke-dasharray="2 2" />
-          <circle cx="12" cy="12" r="6" />
-        </svg>
+        <!-- Заглушка заменена на изображение g1.png -->
+        <img src="img/g1.png" alt="Баланс" class="portfolio-slide-img" loading="lazy">
       </div>
       
       <!-- Slide 2 -->
@@ -781,10 +804,8 @@ footer {
           <div class="story-avatar">2</div>
           <span class="story-title">Гибкость</span>
         </div>
-        <svg class="portfolio-placeholder-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M12 3v18M3 12h18" stroke-dasharray="2 2" />
-          <path d="M12 6c-3.3 0-6 2.7-6 6s2.7 6 6 6" />
-        </svg>
+        <!-- Заглушка заменена на изображение g2.png -->
+        <img src="img/g2.png" alt="Гибкость" class="portfolio-slide-img" loading="lazy">
       </div>
       
       <!-- Slide 3 -->
@@ -793,10 +814,8 @@ footer {
           <div class="story-avatar">3</div>
           <span class="story-title">Дыхание</span>
         </div>
-        <svg class="portfolio-placeholder-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M12 3v18M3 12h18" stroke-dasharray="2 2" />
-          <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
-        </svg>
+        <!-- Заглушка заменена на изображение g3.png -->
+        <img src="img/g3.png" alt="Дыхание" class="portfolio-slide-img" loading="lazy">
       </div>
       
       <!-- Slide 4 -->
@@ -805,10 +824,8 @@ footer {
           <div class="story-avatar">4</div>
           <span class="story-title">Сила</span>
         </div>
-        <svg class="portfolio-placeholder-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M12 3v18M3 12h18" stroke-dasharray="2 2" />
-          <rect x="8" y="8" width="8" height="8" rx="1" />
-        </svg>
+        <!-- Заглушка заменена на изображение g4.png -->
+        <img src="img/g4.png" alt="Сила" class="portfolio-slide-img" loading="lazy">
       </div>
 
     </div>
@@ -1027,7 +1044,6 @@ function directTelegramBooking(programName) {
   }
   
   // Юзернейм твоего бота из BotFather (без значка @)
-  // Если у тебя другое имя бота, замени его внутри кавычек
   const botUsername = 'moonsakura_yoga_bot'; 
   const telegramUrl = `https://t.me/${botUsername}?start=${startParam}`;
   window.open(telegramUrl, '_blank');
